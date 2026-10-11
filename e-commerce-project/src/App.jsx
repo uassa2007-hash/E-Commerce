@@ -5,7 +5,7 @@ import { HomePage } from "./pages/HomePage";
 import { OrderPage } from "./pages/OdersPage";
 import "./App.css";
 import { TrackingPage } from "./pages/TrackingPage";
-import { CheckoutPage } from "./pages/CheckoutPage";
+import { CheckoutPage } from "./pages/checkout/CheckoutPage";
 
 function App() {
   return (
