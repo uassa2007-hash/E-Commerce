@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Header } from "../components/Header";
 import "./HomePage.css";
+import { formateMoney } from "../utils/money";
 
 export function HomePage({ cart }) {
   const [products, setProducts] = useState([]);
