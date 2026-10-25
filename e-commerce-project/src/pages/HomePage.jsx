@@ -42,7 +42,7 @@ export function HomePage({ cart }) {
                 </div>
 
                 <div className="product-price">
-                  Rs.{(product.priceCents / 100).toFixed(2)}
+                  {formateMoney(product.priceCents)}
                 </div>
 
                 <div className="product-quantity-container">
