@@ -66,6 +66,11 @@ export function CheckoutPage({ cart }) {
                         Choose a delivery option:
                       </div>
                       {deliveryOptions.map((deliveryOption) => {
+                        let priceString = "Free Shipping";
+                        if (deliveryOption.priceCents > 0) {
+                          priceString = `${formateMoney(deliveryOption.priceCents)}
+                           - Shipping`;
+                        }
                         return (
                           <div
                             key={deliveryOption.id}
@@ -79,8 +84,9 @@ export function CheckoutPage({ cart }) {
                             />
                             <div>
                               <div className="delivery-option-date">
-                                {dayjs(deliveryOption.estimatedTimeMs)}
-                                Tuesday, June 21
+                                {dayjs(deliveryOption.estimatedTimeMs).format(
+                                  "dddd, MMMM , D",
+                                )}
                               </div>
                               <div className="delivery-option-price">
                                 FREE Shipping
